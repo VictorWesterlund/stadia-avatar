@@ -5,12 +5,11 @@
 
 	$user_id = $_GET["userID"] ?? error("400","No userID provided");
 
-	$db = new DBConnector();
+	$db = new StadiaAvatarDB();
 	$avatar = $db->get_avatar($user_id);
 
-	if($avatar) {
-		echo "{\"status\":\"OK\",\"avatar\":\"${avatar}\"}";
-		return;
+	if(!$avatar) {
+		error("404","No avatar was found for the supplied userID");
 	}
-
-	error("404","No avatar was found for the supplied userID");
+	
+	echo "{\"status\":\"OK\",\"avatar\":\"${avatar}\"}";

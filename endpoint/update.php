@@ -1,18 +1,22 @@
 <?php
 
 	require "../classes/Message.php";
+	require "../classes/Gravatar.php";
 	require "../classes/Database.php";
 
-	$sharedSecret = ""; // Key to update the database
+	$shared_secret = ""; // Key to update the database
 
-	if($sharedSecret !== "") {
+	$request = json_decode(file_get_contents("php://input")) ?? error("400","Bad request");
+
+	if(!$request->sharedSecret || $request->sharedSecret !== $shared_secret) {
 		error("403","Invalid shared secret.");
 	}
 
-	$db = new DBConnector();
+	$db = new StadiaAvatarDB();
+	$gravatar = new Gravatar($request->payload);
 
-	if(!$db->set_avatar("foo","bario")) {
+	if(!$db->set_avatar($request->userID,$gravatar->hash)) {
 		error("500","Something went wrong.");
 	}
-	
+
 	echo "{\"status\":\"OK\"}";
