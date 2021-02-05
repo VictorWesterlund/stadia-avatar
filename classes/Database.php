@@ -6,7 +6,7 @@
 			"host" => "",
 			"username" => "",
 			"password" => "",
-			"database" => "stadia_avatars"
+			"database" => "stadia_avatars" // 'setup-db.sql' contains the db structure
 		];
 
 		protected static $instance;
@@ -44,6 +44,7 @@
 
 	}
 
+	// DB interface for manipulating Stadia Avatar
 	class StadiaAvatarDB extends DBConnector {
 
 		public function __construct() {
@@ -64,6 +65,7 @@
 			return $this->sql->exec_query($SQL);
 		}
 
+		// Return the value of column 'avatar'
 		public function get_avatar($user_id) {
 			$SQL = "SELECT `userid`, `avatar` FROM `avatars` WHERE `userid` = '${user_id}'";
 			$query = $this->sql->exec_query($SQL);
@@ -73,6 +75,7 @@
 			}
 		}
 
+		// Insert or update user avatar
 		public function set_avatar($user_id,$avatar) {
 			if(!$this->get_avatar($user_id)) {
 				http_response_code("201");

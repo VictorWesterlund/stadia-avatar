@@ -1,10 +1,21 @@
+// ==UserScript==
+// @name         Stadia Avatars - Bot
+// @namespace    https://victorwesterlund.com/
+// @version      1.0
+// @description  https://github.com/VictorWesterlund/stadia-avatar
+// @author       VictorWesterlund
+// @match        https://stadia.google.com/*
+// @grant        none
+// @noframes
+// ==/UserScript==
+
 (function() {
 	'use strict';
 
 	/* The Stadia Service Worker "mgsw.js" acts like a proxy and rejects requests to the StadiaAvatar endpoint.
 	   Enable the "Bypass for network" toggle in DevTools->Application->Service Workers to circumvent this issue. */
 
-	const endpoint = "";
+	const endpoint = "https://api.victorwesterlund.com/stadia-avatar/update";
 	const sharedSecret = ""; // Key to update the database
 
 	const className = {
@@ -67,7 +78,7 @@
 			console.log("StadiaAvatar bot started.");
 		},
 		stop: () => {
-			interval = null
+			interval = null;
 			console.log("StadiaAvatar bot stopped.");
 		}
 	}
