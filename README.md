@@ -18,7 +18,7 @@
 <li><p>Head over to <a href="https://greasyfork.org/en/scripts/421251-stadia-avatars">GreasyFork and install the Stadia Avatar client Userscipt</a>.</p>
 <li><p>Wait for the Userscript to install, and then open <a href="http://stadia.com/">Stadia</a>. <i>(Stadia Avatar is now installed.)</i></p>
 <li><p>To link your <a href="#creating-a-gravatar-account--changing-your-profile-picture">Gravatar account</a> with Stadia, head over to the Messages tab in your friends list.</p>
-<li><p>Send a message to <strong>StadiaAvatar#8777</strong> (Stadia Avatar bot) with the e-mail associated to your Gravatar account.</p><p><strong>Sign up to Gravatar with a disposable E-mail <i>(such as <a href="https://10minutemail.com/">10minutemail.com</a>)</i> if you wish to keep your actual E-mail private.</strong></p>
+<li><p>Send a message to <a href="https://stadia.google.com/profile/8288375653325783432"><strong>StadiaAvatar#8777</strong></a> (Stadia Avatar bot) with the e-mail associated to your Gravatar account.</p><p><strong>Sign up to Gravatar with a disposable E-mail <i>(such as <a href="https://10minutemail.com/">10minutemail.com</a>)</i> if you wish to keep your actual E-mail private.</strong></p>
 <li><p><i>That's it!</i> Refresh the page now to see your Gravatar.</p>
 <p><i>The bot will not respond to your message. Make sure you entered your E-mail correctly if you see the default Gravatar picture. If nothing changed at all, the bot is most likely not working :)</i></p>
 </ol>
