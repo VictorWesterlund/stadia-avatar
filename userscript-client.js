@@ -43,14 +43,21 @@
         // Serialized group of selectors based on context
         selectors(group,id = false) {
             switch(group) {
-                case "me": return ".ksZYgc, .rybUIf";
-                case "friends": return `.Y1rZWd[data-playerid="${id}"] .Fnd1Pd, .w2Sl7c[data-playerid="${id}"] .drvCDc`;
+                case "me": return `
+                    .ksZYgc,
+                    .rybUIf
+                `;
+                case "friends": return `
+                    c-wiz[data-p='%.@.null,"${id}"]'] .drvCDc,
+                    .Y1rZWd[data-player-id="${id}"] .Fnd1Pd,
+                    .Y1rZWd[data-playerid="${id}"] .Fnd1Pd,
+                    .w2Sl7c[data-playerid="${id}"] .drvCDc
+                `;
             }
         }
 
         add(selectors,avatar) {
             this.sheet.insertRule(`${selectors} { background-image: url(${avatar}) !important; }`);
-            console.log(`${selectors} { background-image: url(${avatar}) !important; }`);
         }
 
     }
@@ -75,9 +82,15 @@
     // Fetch avatar and append to stylesheet
     function replaceWithGravatar(group,playerID) {
         getStadiaAvatar(playerID).then(response => {
+            if(response.status !== "OK") {
+                return false;
+            }
+
             gravatar.pathname = "/avatar/" + response.avatar; // Append Gravatar hash
             avatars.add(avatars.selectors(group,playerID),gravatar); // Add style override by group
-        });
+        }).catch(
+            // Ignore missing avatars
+        );
     }
 
     // ----
@@ -101,10 +114,11 @@
         clearTimeout(timeout);
 
         timeout = setTimeout(() => {
-            const friends = document.querySelector("[jsname='FhFdCc']").children;
-            const messages = document.querySelector("[jsname='FhFdCc']").children;
+            let elements = [];
+            elements =  Array.prototype.concat.apply(elements,document.querySelector("[jsaction='JIbuQc:mbLu7b']").children);
+            elements = Array.prototype.concat.apply(elements,document.querySelector("[jsname='FhFdCc']").children);
 
-            updateFamily("friends",messages);
+            updateFamily("friends",elements);
         },700);
     }
 

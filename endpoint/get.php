@@ -9,7 +9,7 @@
 	$avatar = $db->get_avatar($user_id);
 
 	if(!$avatar) {
-		error("404","No avatar was found for the supplied userID");
+		error("200","No avatar was found for the supplied userID");
 	}
 	
 	echo "{\"status\":\"OK\",\"avatar\":\"${avatar}\"}";
