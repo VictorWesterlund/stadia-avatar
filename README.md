@@ -1,7 +1,9 @@
 <p align="center">
-  <img width="400" src="https://www.presse-citron.net/app/uploads/2020/03/logo-stadia.png"/>
+  <img height="52" src="https://i.imgur.com/N6UXYux.png"/>
 </p>
-<h1 align="center">Stadia Avatar</h1>
+<p align="center">
+  <img height="80" src="https://i.imgur.com/ZxZKGhp.png"/>
+</p>
 <h3 align="center">Use Gravatars with Google Stadia.</h2>
 <p align="center">Userscript for <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo">Tampermonkey</a> to bring <a href="http://en.gravatar.com/">Globally Recognized Avatars (Gravatars)</a> into Stadia for you and your friends.</p>
 <p align="center">
@@ -9,6 +11,12 @@
 </p>
 <p align="center"><i><strong>Stadia Avatar is not affiliated with Stadia or Google LLC.</strong><br>Stadia, the Stadia beacon, and related marks and logos are trademarks of Google LLC.</i></p>
 <p>&nbsp;</p>
+<p>
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/VictorWesterlund/stadia-avatar"/>
+  <img alt="API Status" src="https://img.shields.io/endpoint?url=https://api.victorwesterlund.com/status?api=stadia-avatar"/>
+  <img alt="Development" src="https://img.shields.io/badge/development-maintained-yellow"/>
+  <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2021"/>
+ </p>
 <h2>Installing / Get started</h2>
 <p><strong>Disclaimer before we get started!</strong><br>Stadia Avatar relies on a third-party database to store and retrieve the Gravatars. Your Stadia player ID and Gravatar hash is stored and made available to the public through Stadia Avatar's API.</p>
 <p>Information stored is and will always be limited to <strong>player ID</strong>, <strong>Gravatar hash</strong> and a <strong>Last-modified timestamp</strong>.</p>
@@ -24,11 +32,6 @@
 </ol>
 <h3>Creating a Gravatar account / Changing your profile picture</h3>
 <p>Follow the instruction on <a href="http://en.gravatar.com/">gravatar.com</a> to set up your Gravatar account.</p>
-<h2>Known issues!</h2>
-<table>
-  <tr><th colspan=2>Issue</th></tr>
-  </tr><td><strong>Avatars don't work on profile pages</strong></td><td>Original Stadia profile pictures are shown on all <code>/profile/</code> pages.<br>Ambiguity in the DOM makes it difficult to link a profile page to a specific user.</td></tr>
-</table>
 <h2>Report issues & suggest features</h2>
 <p>Please report bugs and suggest new features under <a href="https://github.com/VictorWesterlund/stadia-avatar/issues">Issues</a>.</p>
 <h2>License</h2>
