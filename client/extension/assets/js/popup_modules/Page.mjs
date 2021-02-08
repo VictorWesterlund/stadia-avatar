@@ -2,9 +2,10 @@ export class Page {
 
 	constructor(title = "") {
 		this.body = null;
+		this.style = getComputedStyle(document.body);
 
 		this.pageDepth = () => {
-			return parseInt(getComputedStyle(document.body).getPropertyValue("--page-depth"));
+			return parseInt(this.style.getPropertyValue("--page-depth"));
 		}
 
 		this.create(title);
@@ -55,7 +56,7 @@ export class Page {
 	// ----
 
 	close() {
-		const delay = parseInt(getComputedStyle(document.body).getPropertyValue("--animation-speed"));
+		const delay = parseInt(this.style.getPropertyValue("--animation-speed"));
 		document.body.style.setProperty("--page-depth",this.pageDepth() - 1);
 
 		setTimeout(() => {

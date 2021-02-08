@@ -9,4 +9,12 @@ export class AvatarURL extends Page {
 		this.open();
 	}
 
+	content() {
+		const input = document.createElement("input");
+		const submit = document.createElement("button");
+
+		this.body.appendChild(input);
+		this.body.appendChild(submit);
+	}
+
 }

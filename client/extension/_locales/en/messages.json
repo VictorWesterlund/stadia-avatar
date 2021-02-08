@@ -8,7 +8,7 @@
 		"description": "List of different options to set a users's avatar"
 	},
 	"avatar_set_url_support": {
-		"message": "All image formats supported by Chrome except SVG can be added",
+		"message": "Image should be at least 100x100px for best clarity across Stadia. URL must link directly to an image resource of type WebP, AVIF, PNG, APNG, GIF or JPG/JPEG.",
 		"description": "Disclaimer about supported image formats"
 	},
 	"page_return": {

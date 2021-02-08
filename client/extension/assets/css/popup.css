@@ -160,4 +160,5 @@ ol li img {
 	top: var(--height);
 	box-sizing: border-box;
     padding: 20px;
+	font-size: 16px;
 }
