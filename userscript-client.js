@@ -44,11 +44,16 @@
         selectors(group,id = false) {
             switch(group) {
                 case "me": return `
+                    c-wiz[data-p*="${id}"] .XZRzG,
+                    .OGtUWe .dOyvbe,
                     .ksZYgc,
                     .rybUIf
                 `;
                 case "friends": return `
-                    c-wiz[data-p='%.@.null,"${id}"]'] .drvCDc,
+                    div[jsdata*="${id}"] .PwtJse,
+                    c-wiz[data-p*="${id}"] .XZRzG,
+                    c-wiz[data-p*="${id}"] .drvCDc,
+                    c-wiz[data-p*="${id}"] .vLPc0c,
                     .Y1rZWd[data-player-id="${id}"] .Fnd1Pd,
                     .Y1rZWd[data-playerid="${id}"] .Fnd1Pd,
                     .w2Sl7c[data-playerid="${id}"] .drvCDc
@@ -72,6 +77,7 @@
         return id;
     }
 
+    // Fetch Gravatar hash from endpoint
     async function getStadiaAvatar(playerID) {
         stadiaAvatar.searchParams.set("userID",playerID);
 
@@ -95,7 +101,7 @@
 
     // ----
 
-    replaceWithGravatar("me",getID(document.querySelector("[jsname='HiaYvf']")));
+    replaceWithGravatar("me",getID(document.querySelector("[jsname='HiaYvf']"))); // Append styles for my avatar
 
     function updateFamily(group,wrapper) {
         for(const element of wrapper) {
@@ -110,13 +116,15 @@
 
     let timeout = null;
 
+    // Fetch friend avatars
     const friendsList = (mutation,observer) => {
         clearTimeout(timeout);
 
+        // Wait until subtree stops mutating (on initial load)
         timeout = setTimeout(() => {
             let elements = [];
-            elements =  Array.prototype.concat.apply(elements,document.querySelector("[jsaction='JIbuQc:mbLu7b']").children);
-            elements = Array.prototype.concat.apply(elements,document.querySelector("[jsname='FhFdCc']").children);
+            elements =  Array.prototype.concat.apply(elements,document.querySelector("[jsaction='JIbuQc:mbLu7b']").children); // Friends list
+            elements = Array.prototype.concat.apply(elements,document.querySelector("[jsname='FhFdCc']").children); // Messages list
 
             updateFamily("friends",elements);
         },700);
