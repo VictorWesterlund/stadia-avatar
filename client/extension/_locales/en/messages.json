@@ -1,0 +1,18 @@
+{
+	"extension_description": {
+		"message": "Custom Stadia avatars for you and your friends",
+		"description": "Short summary of this extension's function."
+	},
+	"avatar_set": {
+		"message": "Set avatar from",
+		"description": "List of different options to set a users's avatar"
+	},
+	"avatar_set_url_support": {
+		"message": "All image formats supported by Chrome except SVG can be added",
+		"description": "Disclaimer about supported image formats"
+	},
+	"page_return": {
+		"message": "Go back",
+		"description": "Tooltip when hovering the back button on a page"
+	}
+}
