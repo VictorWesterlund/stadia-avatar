@@ -14,8 +14,7 @@
 <p>
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/VictorWesterlund/stadia-avatar"/>
   <img alt="API Status" src="https://img.shields.io/endpoint?url=https://api.victorwesterlund.com/status?api=stadia-avatar"/>
-  <img alt="Development" src="https://img.shields.io/badge/development-maintained-yellow"/>
-  <img alt="Maintenance" src="https://img.shields.io/maintenance/yes/2021"/>
+  <img alt="Maintenance" src="https://img.shields.io/maintenance/no/2021"/>
  </p>
 <h2>Installing / Get started</h2>
 <p><strong>Disclaimer before we get started!</strong><br>Stadia Avatar relies on a third-party database to store and retrieve the Gravatars. Your Stadia player ID and Gravatar hash is stored and made available to the public through Stadia Avatar's API.</p>
